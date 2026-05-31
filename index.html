@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rohan Keshri | Software Engineer & MERN Stack Developer</title>
-  <meta name="description" content="Rohan Keshri – Software Engineer and Full Stack Developer specializing in MERN stack, React.js, Node.js, and AI integration. Explore my projects and experience." />
+  <title>Rohan Keshri | Software Engineer &amp; MERN Stack Developer</title>
+  <meta name="description" content="Rohan Keshri – Software Engineer and Full Stack Developer specializing in MERN stack, React.js, Node.js, and AI integration. Explore my projects, gallery, and certificates." />
   <meta name="keywords" content="Rohan Keshri, Software Engineer, MERN Stack, React.js, Node.js, Full Stack Developer, Portfolio" />
   <meta property="og:title" content="Rohan Keshri | Software Engineer" />
   <meta property="og:description" content="Full Stack Developer with expertise in MERN stack, AI integration, and scalable web applications." />
@@ -20,6 +20,23 @@
   <div class="bg-canvas" id="bgCanvas"></div>
   <div class="noise-overlay"></div>
 
+  <!-- Lightbox Overlay -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <div class="lightbox-content">
+      <img src="" alt="" id="lightboxImg" class="lightbox-img" />
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
@@ -31,7 +48,8 @@
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#experience" class="nav-link">Experience</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#certificates" class="nav-link">Certificates</a></li>
         <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -142,26 +160,33 @@
           <div class="about-highlights">
             <div class="highlight-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              REST API Development & JWT Auth
+              REST API Development &amp; JWT Auth
             </div>
             <div class="highlight-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              AI Integration & Real-Time Systems
+              AI Integration &amp; Real-Time Systems
             </div>
             <div class="highlight-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              Team Leadership & Agile Delivery
+              Team Leadership &amp; Agile Delivery
             </div>
             <div class="highlight-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              Performance Optimization & CI/CD
+              Performance Optimization &amp; CI/CD
             </div>
           </div>
         </div>
         <div class="about-card-wrap">
           <div class="about-profile-card">
             <div class="profile-avatar">
-              <span class="avatar-initials">RK</span>
+              <!-- Replace images/profile.png with your actual photo -->
+              <img
+                src="images/profile.png"
+                alt="Rohan Keshri"
+                class="avatar-photo"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <span class="avatar-initials" style="display:none;">RK</span>
               <div class="avatar-ring"></div>
             </div>
             <h3>Rohan Keshri</h3>
@@ -195,7 +220,6 @@
         <h2 class="section-title">Technical Arsenal</h2>
       </div>
       <div class="skills-grid">
-
         <div class="skill-category" id="skillLang">
           <div class="skill-cat-header">
             <div class="skill-cat-icon">
@@ -209,7 +233,6 @@
             <span class="skill-tag">C++</span>
           </div>
         </div>
-
         <div class="skill-category" id="skillFrontend">
           <div class="skill-cat-header">
             <div class="skill-cat-icon">
@@ -226,7 +249,6 @@
             <span class="skill-tag">GSAP</span>
           </div>
         </div>
-
         <div class="skill-category" id="skillBackend">
           <div class="skill-cat-header">
             <div class="skill-cat-icon">
@@ -243,13 +265,12 @@
             <span class="skill-tag">WebRTC</span>
           </div>
         </div>
-
         <div class="skill-category" id="skillDb">
           <div class="skill-cat-header">
             <div class="skill-cat-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg>
             </div>
-            <h3>Database & Cache</h3>
+            <h3>Database &amp; Cache</h3>
           </div>
           <div class="skill-tags">
             <span class="skill-tag">MongoDB</span>
@@ -257,13 +278,12 @@
             <span class="skill-tag">Redis</span>
           </div>
         </div>
-
         <div class="skill-category" id="skillTools">
           <div class="skill-cat-header">
             <div class="skill-cat-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
             </div>
-            <h3>Tools & Platforms</h3>
+            <h3>Tools &amp; Platforms</h3>
           </div>
           <div class="skill-tags">
             <span class="skill-tag">Git</span>
@@ -276,7 +296,6 @@
             <span class="skill-tag">VS Code</span>
           </div>
         </div>
-
         <div class="skill-category" id="skillConcepts">
           <div class="skill-cat-header">
             <div class="skill-cat-icon">
@@ -295,7 +314,6 @@
             <span class="skill-tag">OS</span>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -308,7 +326,6 @@
         <h2 class="section-title">Where I've Worked</h2>
       </div>
       <div class="timeline">
-
         <div class="timeline-item" id="expAIS">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
@@ -329,14 +346,13 @@
             </div>
           </div>
         </div>
-
         <div class="timeline-item" id="expBio">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
             <div class="timeline-header">
               <div>
                 <h3 class="timeline-company">BIO-ONN Health Care</h3>
-                <p class="timeline-role">Web Developer & SEO Intern</p>
+                <p class="timeline-role">Web Developer &amp; SEO Intern</p>
               </div>
               <span class="timeline-date">Apr 2026 – May 2026</span>
             </div>
@@ -350,7 +366,6 @@
             </div>
           </div>
         </div>
-
         <div class="timeline-item" id="expSlytherin">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
@@ -371,7 +386,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -384,7 +398,6 @@
         <h2 class="section-title">Things I've Built</h2>
       </div>
       <div class="projects-grid">
-
         <div class="project-card featured" id="projectAthletiQ">
           <div class="project-glow"></div>
           <div class="project-header">
@@ -401,18 +414,15 @@
           <h3 class="project-title">AthletiQ</h3>
           <p class="project-subtitle">Sports Event Management System</p>
           <p class="project-desc">
-            Full-stack sports event platform with <strong>real-time athlete tracking</strong> using MediaPipe. 
-            Supports 50+ events with concurrent users. Reduced API load time by 30% through optimized routing and caching strategies.
+            Full-stack sports event platform with <strong>real-time athlete tracking</strong> using MediaPipe.
+            Supports 50+ events with concurrent users. Reduced API load time by 30%.
           </p>
-          <div class="project-meta">
-            <span class="project-date">Jun 2025 – Sep 2025</span>
-          </div>
+          <div class="project-meta"><span class="project-date">Jun 2025 – Sep 2025</span></div>
           <div class="project-tech">
             <span>MongoDB</span><span>Express.js</span><span>React.js</span>
             <span>Node.js</span><span>MediaPipe</span><span>REST APIs</span>
           </div>
         </div>
-
         <div class="project-card featured" id="projectEchoHire">
           <div class="project-glow glow-purple"></div>
           <div class="project-header">
@@ -429,18 +439,15 @@
           <h3 class="project-title">EchoHire AI</h3>
           <p class="project-subtitle">AI Interview Preparation Platform</p>
           <p class="project-desc">
-            Full-stack AI-powered platform for <strong>mock interview preparation</strong> with intelligent question generation and performance analysis. 
-            Features secure JWT authentication and responsive analytics dashboards.
+            Full-stack AI-powered platform for <strong>mock interview preparation</strong> with intelligent question generation and performance analysis.
+            Features secure JWT auth and responsive analytics dashboards.
           </p>
-          <div class="project-meta">
-            <span class="project-date">Dec 2025 – Jan 2026</span>
-          </div>
+          <div class="project-meta"><span class="project-date">Dec 2025 – Jan 2026</span></div>
           <div class="project-tech">
             <span>MongoDB</span><span>Express.js</span><span>React.js</span>
             <span>Node.js</span><span>AI Integration</span><span>JWT</span>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -458,7 +465,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
           </div>
           <div class="edu-content">
-            <h3>B.Tech in Computer Science & Engineering</h3>
+            <h3>B.Tech in Computer Science &amp; Engineering</h3>
             <p class="edu-institution">Invertis University</p>
             <div class="edu-meta">
               <span class="edu-cgpa">
@@ -487,11 +494,272 @@
     </div>
   </section>
 
+  <!-- ================================================
+       GALLERY SECTION
+       Add your images to: images/gallery/
+       Format: <img src="images/gallery/yourphoto.jpg" ...>
+       ================================================ -->
+  <section class="section section-alt" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">06. Gallery</span>
+        <h2 class="section-title">My Moments</h2>
+        <p class="section-subtitle">A glimpse into my journey — events, hackathons, and memories</p>
+      </div>
+
+      <!-- Gallery Filter Tabs -->
+      <div class="gallery-filters" id="galleryFilters">
+        <button class="gallery-filter-btn active" data-filter="all" id="filterAll">All</button>
+        <button class="gallery-filter-btn" data-filter="events" id="filterEvents">Events</button>
+        <button class="gallery-filter-btn" data-filter="hackathon" id="filterHackathon">Hackathons</button>
+        <button class="gallery-filter-btn" data-filter="personal" id="filterPersonal">Personal</button>
+        <button class="gallery-filter-btn" data-filter="work" id="filterWork">Work</button>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <!--
+          ============================================================
+          HOW TO ADD YOUR PHOTOS:
+          1. Copy your image files to: d:\portfolio\images\gallery\
+          2. Add an <div class="gallery-item"> block below like this:
+
+          <div class="gallery-item" data-category="events" data-caption="Your caption here">
+            <img src="images/gallery/your-image.jpg" alt="Description" loading="lazy" />
+            <div class="gallery-overlay">
+              <p class="gallery-caption">Your caption here</p>
+              <div class="gallery-zoom-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                  <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          data-category options: events | hackathon | personal | work
+          ============================================================
+        -->
+
+        <!-- SAMPLE PLACEHOLDER CARDS — Replace with your real photos -->
+        <div class="gallery-item gallery-placeholder" data-category="events" data-caption="Tech Event">
+          <div class="gallery-ph-inner" style="--ph-grad: linear-gradient(135deg,#1e3a5f,#4f8ef7)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span>Add your photo here</span>
+          </div>
+          <div class="gallery-overlay">
+            <p class="gallery-caption">Tech Event</p>
+            <div class="gallery-zoom-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-placeholder gallery-wide" data-category="hackathon" data-caption="Hackathon">
+          <div class="gallery-ph-inner" style="--ph-grad: linear-gradient(135deg,#2d1b69,#9d6fff)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <span>Add your photo here</span>
+          </div>
+          <div class="gallery-overlay">
+            <p class="gallery-caption">Hackathon</p>
+            <div class="gallery-zoom-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-placeholder" data-category="personal" data-caption="Personal Moment">
+          <div class="gallery-ph-inner" style="--ph-grad: linear-gradient(135deg,#0f3d3d,#2dd4bf)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span>Add your photo here</span>
+          </div>
+          <div class="gallery-overlay">
+            <p class="gallery-caption">Personal Moment</p>
+            <div class="gallery-zoom-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-placeholder gallery-tall" data-category="work" data-caption="At Work">
+          <div class="gallery-ph-inner" style="--ph-grad: linear-gradient(135deg,#1a1a2e,#e94560)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="m8 21 4-4 4 4M12 17v4"/></svg>
+            <span>Add your photo here</span>
+          </div>
+          <div class="gallery-overlay">
+            <p class="gallery-caption">At Work</p>
+            <div class="gallery-zoom-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-placeholder" data-category="events" data-caption="Campus Event">
+          <div class="gallery-ph-inner" style="--ph-grad: linear-gradient(135deg,#0d2137,#22d3ee)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span>Add your photo here</span>
+          </div>
+          <div class="gallery-overlay">
+            <p class="gallery-caption">Campus Event</p>
+            <div class="gallery-zoom-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-placeholder" data-category="hackathon" data-caption="Code Sprint">
+          <div class="gallery-ph-inner" style="--ph-grad: linear-gradient(135deg,#1a0533,#a855f7)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            <span>Add your photo here</span>
+          </div>
+          <div class="gallery-overlay">
+            <p class="gallery-caption">Code Sprint</p>
+            <div class="gallery-zoom-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="gallery-hint">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        Add photos to <code>images/gallery/</code> and update the HTML to display your real images
+      </p>
+    </div>
+  </section>
+
+  <!-- ================================================
+       CERTIFICATES SECTION
+       Add certificate images to: images/certificates/
+       ================================================ -->
+  <section class="section" id="certificates">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">07. Certificates</span>
+        <h2 class="section-title">Certifications</h2>
+        <p class="section-subtitle">My verified achievements and professional development milestones</p>
+      </div>
+
+      <div class="cert-grid" id="certGrid">
+        <!--
+          ============================================================
+          HOW TO ADD CERTIFICATES:
+          1. Copy certificate images to: d:\portfolio\images\certificates\
+          2. Add more <div class="cert-card"> blocks like the examples below.
+          3. Fill in: title, issuer, date, cert-color, and optionally link.
+
+          Color theme options for data-color:
+          blue | purple | cyan | teal | orange | pink
+          ============================================================
+        -->
+
+        <!-- Certificate Card Template — Replace with your real certificates -->
+        <div class="cert-card" data-color="blue" id="cert1">
+          <div class="cert-img-wrap">
+            <!-- Replace with: <img src="images/certificates/your-cert.jpg" alt="Certificate name" /> -->
+            <div class="cert-img-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer-row">
+              <span class="cert-badge">Verified</span>
+            </div>
+            <h3 class="cert-title">Add Your Certificate Title</h3>
+            <p class="cert-issuer">Issuing Organization</p>
+            <p class="cert-date">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Month Year
+            </p>
+            <a href="#" class="cert-link" target="_blank" rel="noopener">
+              View Certificate
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="cert-card" data-color="purple" id="cert2">
+          <div class="cert-img-wrap">
+            <div class="cert-img-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer-row">
+              <span class="cert-badge">Verified</span>
+            </div>
+            <h3 class="cert-title">Add Your Certificate Title</h3>
+            <p class="cert-issuer">Issuing Organization</p>
+            <p class="cert-date">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Month Year
+            </p>
+            <a href="#" class="cert-link" target="_blank" rel="noopener">
+              View Certificate
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="cert-card" data-color="cyan" id="cert3">
+          <div class="cert-img-wrap">
+            <div class="cert-img-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer-row">
+              <span class="cert-badge">Verified</span>
+            </div>
+            <h3 class="cert-title">Add Your Certificate Title</h3>
+            <p class="cert-issuer">Issuing Organization</p>
+            <p class="cert-date">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Month Year
+            </p>
+            <a href="#" class="cert-link" target="_blank" rel="noopener">
+              View Certificate
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="cert-card" data-color="teal" id="cert4">
+          <div class="cert-img-wrap">
+            <div class="cert-img-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer-row">
+              <span class="cert-badge">Verified</span>
+            </div>
+            <h3 class="cert-title">Add Your Certificate Title</h3>
+            <p class="cert-issuer">Issuing Organization</p>
+            <p class="cert-date">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Month Year
+            </p>
+            <a href="#" class="cert-link" target="_blank" rel="noopener">
+              View Certificate
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="gallery-hint">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        Add certificate images to <code>images/certificates/</code> and update the title, issuer, date &amp; link for each card
+      </p>
+    </div>
+  </section>
+
   <!-- Contact Section -->
   <section class="section section-alt" id="contact">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">06. Contact</span>
+        <span class="section-tag">08. Contact</span>
         <h2 class="section-title">Let's Work Together</h2>
       </div>
       <div class="contact-layout">

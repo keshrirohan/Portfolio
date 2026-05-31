@@ -2,6 +2,129 @@
    ROHAN KESHRI PORTFOLIO — script.js
    ===================================================== */
 
+// ---- Gallery Filter ----
+function initGalleryFilter() {
+  const filterBtns = document.querySelectorAll(".gallery-filter-btn");
+  const galleryItems = document.querySelectorAll(".gallery-item");
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      filterBtns.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const filter = btn.dataset.filter;
+      galleryItems.forEach((item, i) => {
+        const category = item.dataset.category;
+        const show = filter === "all" || category === filter;
+        item.style.transition = "none";
+        if (show) {
+          item.classList.remove("hidden");
+          setTimeout(() => {
+            item.style.transition = "";
+            item.style.opacity = "1";
+            item.style.transform = "";
+          }, i * 40);
+        } else {
+          item.classList.add("hidden");
+        }
+      });
+    });
+  });
+}
+
+// ---- Lightbox ----
+let lightboxItems = [];
+let lightboxIdx = 0;
+
+function initLightbox() {
+  const lightbox    = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightboxImg");
+  const lightboxCap = document.getElementById("lightboxCaption");
+  const closeBtn    = document.getElementById("lightboxClose");
+  const prevBtn     = document.getElementById("lightboxPrev");
+  const nextBtn     = document.getElementById("lightboxNext");
+
+  // Collect all gallery items with real images only
+  function buildLightboxItems() {
+    lightboxItems = [];
+    document.querySelectorAll(".gallery-item").forEach(item => {
+      const img = item.querySelector("img");
+      const caption = item.dataset.caption || "";
+      if (img && img.src && !img.src.endsWith("#")) {
+        lightboxItems.push({ src: img.src, caption });
+      }
+    });
+  }
+
+  function openLightbox(idx) {
+    buildLightboxItems();
+    if (lightboxItems.length === 0) return;
+    lightboxIdx = idx;
+    const { src, caption } = lightboxItems[lightboxIdx];
+    lightboxImg.src = src;
+    lightboxImg.alt = caption;
+    lightboxCap.textContent = caption;
+    lightbox.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove("open");
+    document.body.style.overflow = "";
+    setTimeout(() => { lightboxImg.src = ""; }, 300);
+  }
+
+  function goNext() {
+    lightboxIdx = (lightboxIdx + 1) % lightboxItems.length;
+    const { src, caption } = lightboxItems[lightboxIdx];
+    lightboxImg.style.opacity = "0";
+    setTimeout(() => {
+      lightboxImg.src = src;
+      lightboxImg.alt = caption;
+      lightboxCap.textContent = caption;
+      lightboxImg.style.opacity = "1";
+    }, 200);
+  }
+
+  function goPrev() {
+    lightboxIdx = (lightboxIdx - 1 + lightboxItems.length) % lightboxItems.length;
+    const { src, caption } = lightboxItems[lightboxIdx];
+    lightboxImg.style.opacity = "0";
+    setTimeout(() => {
+      lightboxImg.src = src;
+      lightboxImg.alt = caption;
+      lightboxCap.textContent = caption;
+      lightboxImg.style.opacity = "1";
+    }, 200);
+  }
+
+  // Attach click on gallery items that have real images
+  document.querySelectorAll(".gallery-item").forEach((item, i) => {
+    item.addEventListener("click", () => {
+      const img = item.querySelector("img");
+      if (img) openLightbox(i);
+    });
+  });
+
+  closeBtn.addEventListener("click", closeLightbox);
+  nextBtn.addEventListener("click", goNext);
+  prevBtn.addEventListener("click", goPrev);
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (!lightbox.classList.contains("open")) return;
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowRight") goNext();
+    if (e.key === "ArrowLeft") goPrev();
+  });
+
+  // Smooth transition for img opacity
+  lightboxImg.style.transition = "opacity 0.2s ease";
+}
+
 // ---- Typed Text Effect ----
 const phrases = [
   "scalable web apps",
@@ -287,6 +410,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initSkillTags();
   initCursorGlow();
   initCardTilt();
+  initGalleryFilter();
+  initLightbox();
 
   const heroEl = document.querySelector(".hero");
   if (heroEl) heroObserver.observe(heroEl);
