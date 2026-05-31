@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rohan Keshri | Software Engineer & MERN Stack Developer</title>
+  <meta name="description" content="Rohan Keshri – Software Engineer and Full Stack Developer specializing in MERN stack, React.js, Node.js, and AI integration. Explore my projects and experience." />
+  <meta name="keywords" content="Rohan Keshri, Software Engineer, MERN Stack, React.js, Node.js, Full Stack Developer, Portfolio" />
+  <meta property="og:title" content="Rohan Keshri | Software Engineer" />
+  <meta property="og:description" content="Full Stack Developer with expertise in MERN stack, AI integration, and scalable web applications." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Animated Background -->
+  <div class="bg-canvas" id="bgCanvas"></div>
+  <div class="noise-overlay"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>RK<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-badge animate-in">
+        <span class="badge-dot"></span>
+        Available for opportunities
+      </div>
+      <h1 class="hero-name animate-in">
+        <span class="name-line">Rohan</span>
+        <span class="name-line gradient-text">Keshri</span>
+      </h1>
+      <div class="hero-title animate-in">
+        <span class="static-text">I build </span>
+        <span class="typed-wrapper">
+          <span class="typed-text" id="typedText"></span>
+          <span class="cursor">|</span>
+        </span>
+      </div>
+      <p class="hero-desc animate-in">
+        Software Engineer &amp; Full Stack Developer crafting scalable MERN applications,
+        intelligent AI integrations, and real-time systems that make an impact.
+      </p>
+      <div class="hero-actions animate-in">
+        <a href="#projects" class="btn btn-primary" id="viewWorkBtn">
+          <span>View My Work</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-secondary" id="contactBtn">Get In Touch</a>
+      </div>
+      <div class="hero-socials animate-in">
+        <a href="mailto:rohankeshri06@gmail.com" class="social-link" id="emailLink" title="Email" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/rohan-keshri06" class="social-link" id="linkedinLink" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://github.com/keshrirohan" class="social-link" id="githubLink" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a href="tel:+917859082214" class="social-link" id="phoneLink" title="Phone" aria-label="Phone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="code-card">
+        <div class="code-header">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="code-filename">rohan.js</span>
+        </div>
+        <pre class="code-body"><code><span class="kw">const</span> <span class="var">rohan</span> = {
+  <span class="key">role</span>: <span class="str">"Full Stack Dev"</span>,
+  <span class="key">stack</span>: [<span class="str">"React"</span>, <span class="str">"Node"</span>,
+          <span class="str">"MongoDB"</span>, <span class="str">"Next.js"</span>],
+  <span class="key">loves</span>: [<span class="str">"AI"</span>, <span class="str">"DSA"</span>,
+          <span class="str">"Real-time apps"</span>],
+  <span class="key">available</span>: <span class="bool">true</span>,
+  <span class="key">build</span>: () =&gt; <span class="str">"awesome things"</span>
+};</code></pre>
+      </div>
+      <div class="stat-pills">
+        <div class="stat-pill">
+          <span class="stat-num">3+</span>
+          <span class="stat-label">Internships</span>
+        </div>
+        <div class="stat-pill">
+          <span class="stat-num">5+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-pill">
+          <span class="stat-num">8.2</span>
+          <span class="stat-label">CGPA</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">01. About</span>
+        <h2 class="section-title">Who I Am</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="about-lead">
+            I'm a <strong>Software Engineer</strong> and <strong>Full Stack Developer</strong> passionate about building products that solve real problems at scale.
+          </p>
+          <p>
+            With hands-on experience in the <strong>MERN stack</strong>, I've developed everything from responsive UIs and RESTful APIs to real-time systems and AI-powered platforms. I enjoy working at the intersection of engineering and product — turning complex requirements into clean, performant solutions.
+          </p>
+          <p>
+            Beyond code, I've led teams, mentored peers, and contributed to projects across healthcare, sports, and education tech. I believe in writing maintainable code, shipping fast, and always learning.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              REST API Development & JWT Auth
+            </div>
+            <div class="highlight-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              AI Integration & Real-Time Systems
+            </div>
+            <div class="highlight-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Team Leadership & Agile Delivery
+            </div>
+            <div class="highlight-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Performance Optimization & CI/CD
+            </div>
+          </div>
+        </div>
+        <div class="about-card-wrap">
+          <div class="about-profile-card">
+            <div class="profile-avatar">
+              <span class="avatar-initials">RK</span>
+              <div class="avatar-ring"></div>
+            </div>
+            <h3>Rohan Keshri</h3>
+            <p class="profile-role">Software Engineer</p>
+            <div class="profile-info">
+              <div class="info-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Bareilly, India
+              </div>
+              <div class="info-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+                rohankeshri06@gmail.com
+              </div>
+              <div class="info-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                +91 78590-82214
+              </div>
+            </div>
+            <a href="mailto:rohankeshri06@gmail.com" class="btn btn-primary btn-sm" id="hireBtn">Hire Me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">02. Skills</span>
+        <h2 class="section-title">Technical Arsenal</h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-category" id="skillLang">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">C++</span>
+          </div>
+        </div>
+
+        <div class="skill-category" id="skillFrontend">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="m8 21 4-4 4 4M12 17v4"/></svg>
+            </div>
+            <h3>Frontend</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">React.js</span>
+            <span class="skill-tag">Next.js</span>
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">Tailwind CSS</span>
+            <span class="skill-tag">GSAP</span>
+          </div>
+        </div>
+
+        <div class="skill-category" id="skillBackend">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+            </div>
+            <h3>Backend</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Express.js</span>
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">GraphQL</span>
+            <span class="skill-tag">JWT Auth</span>
+            <span class="skill-tag">WebRTC</span>
+          </div>
+        </div>
+
+        <div class="skill-category" id="skillDb">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg>
+            </div>
+            <h3>Database & Cache</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">Redis</span>
+          </div>
+        </div>
+
+        <div class="skill-category" id="skillTools">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <h3>Tools & Platforms</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">Postman</span>
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">Vercel</span>
+            <span class="skill-tag">VS Code</span>
+          </div>
+        </div>
+
+        <div class="skill-category" id="skillConcepts">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <h3>Core Concepts</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">System Design</span>
+            <span class="skill-tag">Microservices</span>
+            <span class="skill-tag">DSA</span>
+            <span class="skill-tag">OOP</span>
+            <span class="skill-tag">CI/CD</span>
+            <span class="skill-tag">Agile</span>
+            <span class="skill-tag">DBMS</span>
+            <span class="skill-tag">OS</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">03. Experience</span>
+        <h2 class="section-title">Where I've Worked</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item" id="expAIS">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-company">Amazing Indian Stories</h3>
+                <p class="timeline-role">Software Engineer Intern</p>
+              </div>
+              <span class="timeline-date">Oct 2025 – Dec 2025</span>
+            </div>
+            <ul class="timeline-list">
+              <li>Developed responsive React.js features in a MERN stack application, improving UI consistency and <strong>reducing user friction by 25%</strong>.</li>
+              <li>Built user profile and hiring workflow interfaces supporting <strong>500+ user interactions</strong>.</li>
+              <li>Integrated REST APIs and optimized page performance, <strong>reducing load time by 20%</strong>.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span>React.js</span><span>MERN</span><span>REST APIs</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" id="expBio">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-company">BIO-ONN Health Care</h3>
+                <p class="timeline-role">Web Developer & SEO Intern</p>
+              </div>
+              <span class="timeline-date">Apr 2026 – May 2026</span>
+            </div>
+            <ul class="timeline-list">
+              <li>Optimized WordPress structure, product listings, and metadata, <strong>increasing search impressions by 40%</strong>.</li>
+              <li>Implemented on-page SEO improvements that <strong>boosted rankings for 10+ target keywords</strong>.</li>
+              <li>Resolved catalog issues and improved performance, <strong>increasing approval rate by 30%</strong> and reducing load time by 25%.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span>WordPress</span><span>SEO</span><span>Performance</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" id="expSlytherin">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-company">Slytherin Edu Pvt. Ltd</h3>
+                <p class="timeline-role">Frontend Developer Intern</p>
+              </div>
+              <span class="timeline-date">May 2024 – Jul 2024</span>
+            </div>
+            <ul class="timeline-list">
+              <li>Developed responsive UI components for a job portal using React.js, <strong>supporting 300+ users</strong>.</li>
+              <li>Managed a team of <strong>4–5 members</strong>, coordinating tasks to ensure timely feature delivery.</li>
+              <li>Integrated frontend with backend APIs, <strong>improving responsiveness by 30%</strong>.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span>React.js</span><span>Team Lead</span><span>API Integration</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">04. Projects</span>
+        <h2 class="section-title">Things I've Built</h2>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card featured" id="projectAthletiQ">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/keshrirohan" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-badge">Featured Project</div>
+          <h3 class="project-title">AthletiQ</h3>
+          <p class="project-subtitle">Sports Event Management System</p>
+          <p class="project-desc">
+            Full-stack sports event platform with <strong>real-time athlete tracking</strong> using MediaPipe. 
+            Supports 50+ events with concurrent users. Reduced API load time by 30% through optimized routing and caching strategies.
+          </p>
+          <div class="project-meta">
+            <span class="project-date">Jun 2025 – Sep 2025</span>
+          </div>
+          <div class="project-tech">
+            <span>MongoDB</span><span>Express.js</span><span>React.js</span>
+            <span>Node.js</span><span>MediaPipe</span><span>REST APIs</span>
+          </div>
+        </div>
+
+        <div class="project-card featured" id="projectEchoHire">
+          <div class="project-glow glow-purple"></div>
+          <div class="project-header">
+            <div class="project-icon icon-purple">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/keshrirohan" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-badge badge-purple">AI Powered</div>
+          <h3 class="project-title">EchoHire AI</h3>
+          <p class="project-subtitle">AI Interview Preparation Platform</p>
+          <p class="project-desc">
+            Full-stack AI-powered platform for <strong>mock interview preparation</strong> with intelligent question generation and performance analysis. 
+            Features secure JWT authentication and responsive analytics dashboards.
+          </p>
+          <div class="project-meta">
+            <span class="project-date">Dec 2025 – Jan 2026</span>
+          </div>
+          <div class="project-tech">
+            <span>MongoDB</span><span>Express.js</span><span>React.js</span>
+            <span>Node.js</span><span>AI Integration</span><span>JWT</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">05. Education</span>
+        <h2 class="section-title">Academic Background</h2>
+      </div>
+      <div class="edu-grid">
+        <div class="edu-card" id="eduBtech">
+          <div class="edu-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <div class="edu-content">
+            <h3>B.Tech in Computer Science & Engineering</h3>
+            <p class="edu-institution">Invertis University</p>
+            <div class="edu-meta">
+              <span class="edu-cgpa">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                CGPA: 8.2
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="edu-card" id="eduClass12">
+          <div class="edu-icon icon-teal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+          <div class="edu-content">
+            <h3>Class 12th</h3>
+            <p class="edu-institution">CBSE Board</p>
+            <div class="edu-meta">
+              <span class="edu-cgpa">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                CGPA: 8.2
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">06. Contact</span>
+        <h2 class="section-title">Let's Work Together</h2>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-info">
+          <p class="contact-lead">
+            I'm currently <span class="highlight">open to new opportunities</span> — whether it's a full-time role, freelance project, or a cool collaboration. My inbox is always open!
+          </p>
+          <div class="contact-cards">
+            <a href="mailto:rohankeshri06@gmail.com" class="contact-card" id="contactEmail">
+              <div class="contact-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+              </div>
+              <div>
+                <p class="contact-card-label">Email</p>
+                <p class="contact-card-value">rohankeshri06@gmail.com</p>
+              </div>
+            </a>
+            <a href="https://linkedin.com/in/rohan-keshri06" target="_blank" rel="noopener" class="contact-card" id="contactLinkedin">
+              <div class="contact-card-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              </div>
+              <div>
+                <p class="contact-card-label">LinkedIn</p>
+                <p class="contact-card-value">rohan-keshri06</p>
+              </div>
+            </a>
+            <a href="https://github.com/keshrirohan" target="_blank" rel="noopener" class="contact-card" id="contactGithub">
+              <div class="contact-card-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </div>
+              <div>
+                <p class="contact-card-label">GitHub</p>
+                <p class="contact-card-value">keshrirohan</p>
+              </div>
+            </a>
+            <a href="tel:+917859082214" class="contact-card" id="contactPhone">
+              <div class="contact-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <p class="contact-card-label">Phone</p>
+                <p class="contact-card-value">+91 78590-82214</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label for="nameInput">Your Name</label>
+            <input type="text" id="nameInput" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="emailInput">Your Email</label>
+            <input type="email" id="emailInput" name="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subjectInput">Subject</label>
+            <input type="text" id="subjectInput" name="subject" placeholder="Let's collaborate!" />
+          </div>
+          <div class="form-group">
+            <label for="messageInput">Message</label>
+            <textarea id="messageInput" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+            <span>Send Message</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+          <div class="form-success" id="formSuccess">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Message sent! I'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <a href="#home" class="nav-logo">
+          <span class="logo-bracket">&lt;</span>RK<span class="logo-bracket">/&gt;</span>
+        </a>
+        <p class="footer-text">
+          Designed &amp; Built by <strong>Rohan Keshri</strong> · 2026
+        </p>
+        <div class="footer-socials">
+          <a href="https://github.com/keshrirohan" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/rohan-keshri06" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
