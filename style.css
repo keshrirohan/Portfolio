@@ -1064,6 +1064,35 @@ button { cursor: pointer; border: none; background: none; }
   background: var(--accent-teal);
 }
 
+/* Certificate type label (Internship / Hackathon / Achievement) */
+.cert-type-tag {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 100px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.cert-type-internship {
+  background: rgba(79, 142, 247, 0.12);
+  border: 1px solid rgba(79, 142, 247, 0.28);
+  color: var(--accent-blue);
+}
+
+.cert-type-hackathon {
+  background: rgba(157, 111, 255, 0.12);
+  border: 1px solid rgba(157, 111, 255, 0.28);
+  color: var(--accent-purple);
+}
+
+.cert-type-achievement {
+  background: rgba(251, 146, 60, 0.12);
+  border: 1px solid rgba(251, 146, 60, 0.28);
+  color: #fb923c;
+}
+
 .cert-title {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 1rem;
