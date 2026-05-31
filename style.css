@@ -1093,6 +1093,12 @@ button { cursor: pointer; border: none; background: none; }
   color: #fb923c;
 }
 
+.cert-type-conference {
+  background: rgba(244, 114, 182, 0.12);
+  border: 1px solid rgba(244, 114, 182, 0.28);
+  color: #f472b6;
+}
+
 .cert-title {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 1rem;
