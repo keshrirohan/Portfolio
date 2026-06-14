@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Rohan Keshri</title>
+  <meta name="description" content="Get in touch with Rohan Keshri — open to full-time roles, freelance projects, and collaborations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-canvas" id="bgCanvas"></div>
+  <div class="noise-overlay"></div>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo"><span class="logo-bracket">&lt;</span>RK<span class="logo-bracket">/&gt;</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#about" class="nav-link">About</a></li>
+        <li><a href="/#skills" class="nav-link">Skills</a></li>
+        <li><a href="/experience" class="nav-link">Experience</a></li>
+        <li><a href="/gallery" class="nav-link">Gallery</a></li>
+        <li><a href="/certificates" class="nav-link">Certificates</a></li>
+        <li><a href="/contact" class="nav-link active-page nav-cta">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <main style="padding-top: 100px;">
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">08. Contact</span>
+          <h1 class="section-title">Let's Work Together</h1>
+        </div>
+        <div class="contact-layout">
+          <div class="contact-info">
+            <p class="contact-lead">
+              I'm currently <span class="highlight">open to new opportunities</span> — whether it's a full-time role, freelance project, or a cool collaboration. My inbox is always open!
+            </p>
+            <div class="contact-cards">
+              <a href="mailto:rohankeshri06@gmail.com" class="contact-card" id="contactEmail">
+                <div class="contact-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg></div>
+                <div><p class="contact-card-label">Email</p><p class="contact-card-value">rohankeshri06@gmail.com</p></div>
+              </a>
+              <a href="https://linkedin.com/in/rohan-keshri06" target="_blank" rel="noopener" class="contact-card" id="contactLinkedin">
+                <div class="contact-card-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></div>
+                <div><p class="contact-card-label">LinkedIn</p><p class="contact-card-value">rohan-keshri06</p></div>
+              </a>
+              <a href="https://github.com/keshrirohan" target="_blank" rel="noopener" class="contact-card" id="contactGithub">
+                <div class="contact-card-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></div>
+                <div><p class="contact-card-label">GitHub</p><p class="contact-card-value">keshrirohan</p></div>
+              </a>
+              <a href="tel:+917859082214" class="contact-card" id="contactPhone">
+                <div class="contact-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+                <div><p class="contact-card-label">Phone</p><p class="contact-card-value">+91 78590-82214</p></div>
+              </a>
+            </div>
+          </div>
+          <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+              <label for="nameInput">Your Name</label>
+              <input type="text" id="nameInput" name="name" placeholder="John Doe" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="emailInput">Your Email</label>
+              <input type="email" id="emailInput" name="email" placeholder="john@example.com" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="subjectInput">Subject</label>
+              <input type="text" id="subjectInput" name="subject" placeholder="Let's collaborate!" />
+            </div>
+            <div class="form-group">
+              <label for="messageInput">Message</label>
+              <textarea id="messageInput" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <span>Send Message</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+            <div class="form-success" id="formSuccess">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Message sent! I'll get back to you soon.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <a href="/" class="nav-logo"><span class="logo-bracket">&lt;</span>RK<span class="logo-bracket">/&gt;</span></a>
+        <nav class="footer-nav">
+          <a href="/experience">Experience</a><a href="/gallery">Gallery</a>
+          <a href="/certificates">Certificates</a><a href="/contact">Contact</a>
+        </nav>
+        <p class="footer-text">Designed &amp; Built by <strong>Rohan Keshri</strong> · 2026</p>
+        <div class="footer-socials">
+          <a href="https://github.com/keshrirohan" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/rohan-keshri06" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

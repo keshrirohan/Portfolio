@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rohan Keshri | Software Engineer &amp; MERN Stack Developer</title>
-  <meta name="description" content="Rohan Keshri – Software Engineer and Full Stack Developer specializing in MERN stack, React.js, Node.js, and AI integration. Explore my projects, gallery, and certificates." />
+  <title>Rohan Keshri | Software Engineer & MERN Stack Developer</title>
+  <meta name="description" content="Rohan Keshri – Software Engineer and Full Stack Developer specializing in MERN stack, React.js, Node.js, and AI integration." />
   <meta name="keywords" content="Rohan Keshri, Software Engineer, MERN Stack, React.js, Node.js, Full Stack Developer, Portfolio" />
   <meta property="og:title" content="Rohan Keshri | Software Engineer" />
   <meta property="og:description" content="Full Stack Developer with expertise in MERN stack, AI integration, and scalable web applications." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rohankeshri.dev/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <!-- Animated Background -->
   <div class="bg-canvas" id="bgCanvas"></div>
   <div class="noise-overlay"></div>
 
-  <!-- Lightbox Overlay -->
+  <!-- Lightbox -->
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
     <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -40,21 +40,33 @@
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="#home" class="nav-logo">
+      <a href="/" class="nav-logo">
         <span class="logo-bracket">&lt;</span>RK<span class="logo-bracket">/&gt;</span>
       </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#experience" class="nav-link">Experience</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#gallery" class="nav-link">Gallery</a></li>
-        <li><a href="#certificates" class="nav-link">Certificates</a></li>
-        <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
+        <li><a href="/#about" class="nav-link">About</a></li>
+        <li><a href="/#skills" class="nav-link">Skills</a></li>
+        <li><a href="/experience" class="nav-link">Experience</a></li>
+        <li><a href="/gallery" class="nav-link">Gallery</a></li>
+        <li><a href="/certificates" class="nav-link">Certificates</a></li>
+        <li><a href="/contact" class="nav-link nav-cta">Contact</a></li>
       </ul>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -81,11 +93,11 @@
         intelligent AI integrations, and real-time systems that make an impact.
       </p>
       <div class="hero-actions animate-in">
-        <a href="#projects" class="btn btn-primary" id="viewWorkBtn">
+        <a href="/experience" class="btn btn-primary" id="viewWorkBtn">
           <span>View My Work</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="#contact" class="btn btn-secondary" id="contactBtn">Get In Touch</a>
+        <a href="/contact" class="btn btn-secondary" id="contactBtn">Get In Touch</a>
       </div>
       <div class="hero-socials animate-in">
         <a href="mailto:rohankeshri06@gmail.com" class="social-link" id="emailLink" title="Email" aria-label="Email">
@@ -102,22 +114,25 @@
         </a>
       </div>
     </div>
+
+    <!-- Hero Visual — Profile Photo Prominent -->
     <div class="hero-visual">
-      <div class="code-card">
-        <div class="code-header">
-          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-          <span class="code-filename">rohan.js</span>
+      <div class="hero-profile-wrap">
+        <div class="hero-profile-glow"></div>
+        <div class="hero-profile-ring">
+          <img
+            src="images/profile.png"
+            alt="Rohan Keshri"
+            class="hero-profile-img"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+          />
+          <div class="hero-profile-fallback" style="display:none;">RK</div>
         </div>
-        <pre class="code-body"><code><span class="kw">const</span> <span class="var">rohan</span> = {
-  <span class="key">role</span>: <span class="str">"Full Stack Dev"</span>,
-  <span class="key">stack</span>: [<span class="str">"React"</span>, <span class="str">"Node"</span>,
-          <span class="str">"MongoDB"</span>, <span class="str">"Next.js"</span>],
-  <span class="key">loves</span>: [<span class="str">"AI"</span>, <span class="str">"DSA"</span>,
-          <span class="str">"Real-time apps"</span>],
-  <span class="key">available</span>: <span class="bool">true</span>,
-  <span class="key">build</span>: () =&gt; <span class="str">"awesome things"</span>
-};</code></pre>
+        <div class="hero-profile-badge">
+          <span class="badge-dot"></span> Open to Work
+        </div>
       </div>
+
       <div class="stat-pills">
         <div class="stat-pill">
           <span class="stat-num">5+</span>
@@ -133,6 +148,7 @@
         </div>
       </div>
     </div>
+
     <div class="scroll-indicator">
       <div class="scroll-line"></div>
       <span>scroll</span>
@@ -179,12 +195,10 @@
         <div class="about-card-wrap">
           <div class="about-profile-card">
             <div class="profile-avatar">
-              <!-- Profile photo from Google Drive -->
               <img
-                src="https://lh3.googleusercontent.com/d/1_J1RBqUHWAVuXbBupiksh842mwKYmNvI"
+                src="images/profile.png"
                 alt="Rohan Keshri"
                 class="avatar-photo"
-                referrerpolicy="no-referrer"
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
               />
               <span class="avatar-initials" style="display:none;">RK</span>
@@ -223,779 +237,64 @@
       <div class="skills-grid">
         <div class="skill-category" id="skillLang">
           <div class="skill-cat-header">
-            <div class="skill-cat-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-            </div>
+            <div class="skill-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
             <h3>Languages</h3>
           </div>
           <div class="skill-tags">
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">TypeScript</span>
-            <span class="skill-tag">C++</span>
+            <span class="skill-tag">JavaScript</span><span class="skill-tag">TypeScript</span><span class="skill-tag">C++</span>
           </div>
         </div>
         <div class="skill-category" id="skillFrontend">
           <div class="skill-cat-header">
-            <div class="skill-cat-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="m8 21 4-4 4 4M12 17v4"/></svg>
-            </div>
+            <div class="skill-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="m8 21 4-4 4 4M12 17v4"/></svg></div>
             <h3>Frontend</h3>
           </div>
           <div class="skill-tags">
-            <span class="skill-tag">React.js</span>
-            <span class="skill-tag">Next.js</span>
-            <span class="skill-tag">HTML5</span>
-            <span class="skill-tag">CSS3</span>
-            <span class="skill-tag">Tailwind CSS</span>
-            <span class="skill-tag">GSAP</span>
+            <span class="skill-tag">React.js</span><span class="skill-tag">Next.js</span><span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span><span class="skill-tag">Tailwind CSS</span><span class="skill-tag">GSAP</span>
           </div>
         </div>
         <div class="skill-category" id="skillBackend">
           <div class="skill-cat-header">
-            <div class="skill-cat-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
-            </div>
+            <div class="skill-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg></div>
             <h3>Backend</h3>
           </div>
           <div class="skill-tags">
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">Express.js</span>
-            <span class="skill-tag">REST APIs</span>
-            <span class="skill-tag">GraphQL</span>
-            <span class="skill-tag">JWT Auth</span>
-            <span class="skill-tag">WebRTC</span>
+            <span class="skill-tag">Node.js</span><span class="skill-tag">Express.js</span><span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">GraphQL</span><span class="skill-tag">JWT Auth</span><span class="skill-tag">WebRTC</span>
           </div>
         </div>
         <div class="skill-category" id="skillDb">
           <div class="skill-cat-header">
-            <div class="skill-cat-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg>
-            </div>
+            <div class="skill-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg></div>
             <h3>Database &amp; Cache</h3>
           </div>
           <div class="skill-tags">
-            <span class="skill-tag">MongoDB</span>
-            <span class="skill-tag">MySQL</span>
-            <span class="skill-tag">Redis</span>
+            <span class="skill-tag">MongoDB</span><span class="skill-tag">MySQL</span><span class="skill-tag">Redis</span>
           </div>
         </div>
         <div class="skill-category" id="skillTools">
           <div class="skill-cat-header">
-            <div class="skill-cat-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-            </div>
+            <div class="skill-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
             <h3>Tools &amp; Platforms</h3>
           </div>
           <div class="skill-tags">
-            <span class="skill-tag">Git</span>
-            <span class="skill-tag">GitHub</span>
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">AWS</span>
-            <span class="skill-tag">Postman</span>
-            <span class="skill-tag">Linux</span>
-            <span class="skill-tag">Vercel</span>
-            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">Git</span><span class="skill-tag">GitHub</span><span class="skill-tag">Docker</span>
+            <span class="skill-tag">AWS</span><span class="skill-tag">Postman</span><span class="skill-tag">Linux</span>
+            <span class="skill-tag">Vercel</span><span class="skill-tag">VS Code</span>
           </div>
         </div>
         <div class="skill-category" id="skillConcepts">
           <div class="skill-cat-header">
-            <div class="skill-cat-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-            </div>
+            <div class="skill-cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
             <h3>Core Concepts</h3>
           </div>
           <div class="skill-tags">
-            <span class="skill-tag">System Design</span>
-            <span class="skill-tag">Microservices</span>
-            <span class="skill-tag">DSA</span>
-            <span class="skill-tag">OOP</span>
-            <span class="skill-tag">CI/CD</span>
-            <span class="skill-tag">Agile</span>
-            <span class="skill-tag">DBMS</span>
-            <span class="skill-tag">OS</span>
+            <span class="skill-tag">System Design</span><span class="skill-tag">Microservices</span><span class="skill-tag">DSA</span>
+            <span class="skill-tag">OOP</span><span class="skill-tag">CI/CD</span><span class="skill-tag">Agile</span>
+            <span class="skill-tag">DBMS</span><span class="skill-tag">OS</span>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section class="section" id="experience">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">03. Experience</span>
-        <h2 class="section-title">Where I've Worked</h2>
-      </div>
-      <div class="timeline">
-
-        <!-- 1. Most Recent: BIO-ONN Apr 2026 – May 2026 -->
-        <div class="timeline-item" id="expBio">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <div>
-                <h3 class="timeline-company">BIO-ONN Health Care</h3>
-                <p class="timeline-role">Web Developer &amp; SEO Intern</p>
-              </div>
-              <span class="timeline-date">Apr 2026 – May 2026</span>
-            </div>
-            <ul class="timeline-list">
-              <li>Optimized WordPress structure, product listings, and metadata, <strong>increasing search impressions by 40%</strong>.</li>
-              <li>Implemented on-page SEO improvements that <strong>boosted rankings for 10+ target keywords</strong>.</li>
-              <li>Resolved catalog issues and improved performance, <strong>increasing approval rate by 30%</strong> and reducing load time by 25%.</li>
-            </ul>
-            <div class="timeline-tags">
-              <span>WordPress</span><span>SEO</span><span>Performance</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 2. Python Full Stack Oct – Dec 2025 -->
-        <div class="timeline-item" id="expEduSkillsPython">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <div>
-                <h3 class="timeline-company">EduSkills Academy <span class="timeline-org-badge">AICTE · Ministry of Education</span></h3>
-                <p class="timeline-role">Python Full Stack Developer Intern (Virtual)</p>
-              </div>
-              <span class="timeline-date">Oct 2025 – Dec 2025</span>
-            </div>
-            <ul class="timeline-list">
-              <li>Completed a <strong>10-week Python Full Stack Developer Virtual Internship</strong> certified by AICTE &amp; Ministry of Education.</li>
-              <li>Built end-to-end web applications using Python and full-stack technologies, strengthening backend and frontend integration skills.</li>
-              <li>Achieved <strong>Grade O (Outstanding)</strong> demonstrating strong grasp of full-stack development concepts.</li>
-            </ul>
-            <div class="timeline-tags">
-              <span>Python</span><span>Full Stack</span><span>AICTE</span><span>Virtual</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 3. Amazing Indian Stories Oct – Dec 2025 -->
-        <div class="timeline-item" id="expAIS">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <div>
-                <h3 class="timeline-company">Amazing Indian Stories</h3>
-                <p class="timeline-role">Software Engineer Intern</p>
-              </div>
-              <span class="timeline-date">Oct 2025 – Dec 2025</span>
-            </div>
-            <ul class="timeline-list">
-              <li>Developed responsive React.js features in a MERN stack application, improving UI consistency and <strong>reducing user friction by 25%</strong>.</li>
-              <li>Built user profile and hiring workflow interfaces supporting <strong>500+ user interactions</strong>.</li>
-              <li>Integrated REST APIs and optimized page performance, <strong>reducing load time by 20%</strong>.</li>
-            </ul>
-            <div class="timeline-tags">
-              <span>React.js</span><span>MERN</span><span>REST APIs</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4. AI-ML Virtual Internship Apr – Jun 2025 -->
-        <div class="timeline-item" id="expEduSkillsAI">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <div>
-                <h3 class="timeline-company">EduSkills / AICTE <span class="timeline-org-badge">Google for Developers</span></h3>
-                <p class="timeline-role">AI-ML Virtual Intern</p>
-              </div>
-              <span class="timeline-date">Apr 2025 – Jun 2025</span>
-            </div>
-            <ul class="timeline-list">
-              <li>Completed a <strong>10-week AI-ML Virtual Internship</strong> supported by <strong>Google for Developers</strong> (India Edu Program) &amp; AICTE.</li>
-              <li>Gained hands-on exposure to Artificial Intelligence and Machine Learning concepts, tools, and real-world applications.</li>
-              <li>Achieved <strong>Grade D (Average)</strong> through the AICTE-EduSkills National Internship Portal, earning a verified certificate.</li>
-            </ul>
-            <div class="timeline-tags">
-              <span>AI / ML</span><span>Google</span><span>AICTE</span><span>Virtual</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 5. Slytherin Edu May – Jul 2024 -->
-        <div class="timeline-item" id="expSlytherin">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <div>
-                <h3 class="timeline-company">Slytherin Edu Pvt. Ltd</h3>
-                <p class="timeline-role">Frontend Developer Intern</p>
-              </div>
-              <span class="timeline-date">May 2024 – Jul 2024</span>
-            </div>
-            <ul class="timeline-list">
-              <li>Developed responsive UI components for a job portal using React.js, <strong>supporting 300+ users</strong>.</li>
-              <li>Managed a team of <strong>4–5 members</strong>, coordinating tasks to ensure timely feature delivery.</li>
-              <li>Integrated frontend with backend APIs, <strong>improving responsiveness by 30%</strong>.</li>
-            </ul>
-            <div class="timeline-tags">
-              <span>React.js</span><span>Team Lead</span><span>API Integration</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section class="section section-alt" id="projects">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">04. Projects</span>
-        <h2 class="section-title">Things I've Built</h2>
-      </div>
-      <div class="projects-grid">
-        <div class="project-card featured" id="projectAthletiQ">
-          <div class="project-glow"></div>
-          <div class="project-header">
-            <div class="project-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/keshrirohan" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              </a>
-            </div>
-          </div>
-          <div class="project-badge">Featured Project</div>
-          <h3 class="project-title">AthletiQ</h3>
-          <p class="project-subtitle">Sports Event Management System</p>
-          <p class="project-desc">
-            Full-stack sports event platform with <strong>real-time athlete tracking</strong> using MediaPipe.
-            Supports 50+ events with concurrent users. Reduced API load time by 30%.
-          </p>
-          <div class="project-meta"><span class="project-date">Jun 2025 – Sep 2025</span></div>
-          <div class="project-tech">
-            <span>MongoDB</span><span>Express.js</span><span>React.js</span>
-            <span>Node.js</span><span>MediaPipe</span><span>REST APIs</span>
-          </div>
-        </div>
-        <div class="project-card featured" id="projectEchoHire">
-          <div class="project-glow glow-purple"></div>
-          <div class="project-header">
-            <div class="project-icon icon-purple">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/keshrirohan" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              </a>
-            </div>
-          </div>
-          <div class="project-badge badge-purple">AI Powered</div>
-          <h3 class="project-title">EchoHire AI</h3>
-          <p class="project-subtitle">AI Interview Preparation Platform</p>
-          <p class="project-desc">
-            Full-stack AI-powered platform for <strong>mock interview preparation</strong> with intelligent question generation and performance analysis.
-            Features secure JWT auth and responsive analytics dashboards.
-          </p>
-          <div class="project-meta"><span class="project-date">Dec 2025 – Jan 2026</span></div>
-          <div class="project-tech">
-            <span>MongoDB</span><span>Express.js</span><span>React.js</span>
-            <span>Node.js</span><span>AI Integration</span><span>JWT</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Education Section -->
-  <section class="section" id="education">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">05. Education</span>
-        <h2 class="section-title">Academic Background</h2>
-      </div>
-      <div class="edu-grid">
-        <div class="edu-card" id="eduBtech">
-          <div class="edu-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-          </div>
-          <div class="edu-content">
-            <h3>B.Tech in Computer Science &amp; Engineering</h3>
-            <p class="edu-institution">Invertis University</p>
-            <div class="edu-meta">
-              <span class="edu-cgpa">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                CGPA: 8.2
-              </span>
-            </div>
-          </div>
-        </div>
-        <div class="edu-card" id="eduClass12">
-          <div class="edu-icon icon-teal">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-          </div>
-          <div class="edu-content">
-            <h3>Class 12th</h3>
-            <p class="edu-institution">CBSE Board</p>
-            <div class="edu-meta">
-              <span class="edu-cgpa">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                CGPA: 8.2
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================================================
-       GALLERY SECTION
-       Add your images to: images/gallery/
-       Format: <img src="images/gallery/yourphoto.jpg" ...>
-       ================================================ -->
-  <section class="section section-alt" id="gallery">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">06. Gallery</span>
-        <h2 class="section-title">My Moments</h2>
-        <p class="section-subtitle">A glimpse into my journey — events, hackathons, and memories</p>
-      </div>
-
-      <!-- Gallery Filter Tabs -->
-      <div class="gallery-filters" id="galleryFilters">
-        <button class="gallery-filter-btn active" data-filter="all" id="filterAll">All</button>
-        <button class="gallery-filter-btn" data-filter="events" id="filterEvents">Events</button>
-        <button class="gallery-filter-btn" data-filter="hackathon" id="filterHackathon">Hackathons</button>
-        <button class="gallery-filter-btn" data-filter="personal" id="filterPersonal">Personal</button>
-        <button class="gallery-filter-btn" data-filter="work" id="filterWork">Work</button>
-      </div>
-
-      <div class="gallery-grid" id="galleryGrid">
-        <!--
-          ============================================================
-          HOW TO ADD YOUR PHOTOS:
-          1. Copy your image files to: d:\portfolio\images\gallery\
-          2. Add an <div class="gallery-item"> block below like this:
-
-          <div class="gallery-item" data-category="events" data-caption="Your caption here">
-            <img src="images/gallery/your-image.jpg" alt="Description" loading="lazy" />
-            <div class="gallery-overlay">
-              <p class="gallery-caption">Your caption here</p>
-              <div class="gallery-zoom-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                  <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
-                </svg>
-              </div>
-            </div>
-          </div>
-
-          data-category options: events | hackathon | personal | work
-          ============================================================
-        -->
-
-        <!-- SAMPLE PLACEHOLDER CARDS — Replace with your real photos -->
-        <div class="gallery-item gallery-placeholder" data-category="events" data-caption="Tech Event">
-          <div class="gallery-ph-inner" style="--ph-grad: linear-gradient(135deg,#1e3a5f,#4f8ef7)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            <span>Add your photo here</span>
-          </div>
-          <div class="gallery-overlay">
-            <p class="gallery-caption">Tech Event</p>
-            <div class="gallery-zoom-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-            </div>
-          </div>
-        </div>
-
-        <div class="gallery-item gallery-placeholder gallery-wide" data-category="hackathon" data-caption="Hackathon">
-          <div class="gallery-ph-inner" style="--ph-grad: linear-gradient(135deg,#2d1b69,#9d6fff)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-            <span>Add your photo here</span>
-          </div>
-          <div class="gallery-overlay">
-            <p class="gallery-caption">Hackathon</p>
-            <div class="gallery-zoom-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-            </div>
-          </div>
-        </div>
-
-        <div class="gallery-item gallery-placeholder" data-category="personal" data-caption="Personal Moment">
-          <div class="gallery-ph-inner" style="--ph-grad: linear-gradient(135deg,#0f3d3d,#2dd4bf)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            <span>Add your photo here</span>
-          </div>
-          <div class="gallery-overlay">
-            <p class="gallery-caption">Personal Moment</p>
-            <div class="gallery-zoom-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-            </div>
-          </div>
-        </div>
-
-        <div class="gallery-item gallery-placeholder gallery-tall" data-category="work" data-caption="At Work">
-          <div class="gallery-ph-inner" style="--ph-grad: linear-gradient(135deg,#1a1a2e,#e94560)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="m8 21 4-4 4 4M12 17v4"/></svg>
-            <span>Add your photo here</span>
-          </div>
-          <div class="gallery-overlay">
-            <p class="gallery-caption">At Work</p>
-            <div class="gallery-zoom-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-            </div>
-          </div>
-        </div>
-
-        <div class="gallery-item gallery-placeholder" data-category="events" data-caption="Campus Event">
-          <div class="gallery-ph-inner" style="--ph-grad: linear-gradient(135deg,#0d2137,#22d3ee)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <span>Add your photo here</span>
-          </div>
-          <div class="gallery-overlay">
-            <p class="gallery-caption">Campus Event</p>
-            <div class="gallery-zoom-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-            </div>
-          </div>
-        </div>
-
-        <div class="gallery-item gallery-placeholder" data-category="hackathon" data-caption="Code Sprint">
-          <div class="gallery-ph-inner" style="--ph-grad: linear-gradient(135deg,#1a0533,#a855f7)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-            <span>Add your photo here</span>
-          </div>
-          <div class="gallery-overlay">
-            <p class="gallery-caption">Code Sprint</p>
-            <div class="gallery-zoom-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <p class="gallery-hint">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        Add photos to <code>images/gallery/</code> and update the HTML to display your real images
-      </p>
-    </div>
-  </section>
-
-  <!-- ================================================
-       CERTIFICATES SECTION
-       Add certificate images to: images/certificates/
-       ================================================ -->
-  <section class="section" id="certificates">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">07. Certificates</span>
-        <h2 class="section-title">Certifications</h2>
-        <p class="section-subtitle">My verified achievements and professional development milestones</p>
-      </div>
-
-      <div class="cert-grid" id="certGrid">
-
-        <!-- 1. AI-ML Virtual Internship — Apr–Jun 2025 -->
-        <div class="cert-card" data-color="blue" id="cert1">
-          <div class="cert-img-wrap">
-            <img
-              src="https://res.cloudinary.com/dj9vanzqq/image/upload/ROHAN_KESHRI_118392_pages-to-jpg-0001_mnxmdz.jpg"
-              alt="AI-ML Virtual Internship Certificate"
-              loading="lazy"
-            />
-          </div>
-          <div class="cert-body">
-            <div class="cert-issuer-row">
-              <span class="cert-badge">Verified</span>
-              <span class="cert-type-tag cert-type-internship">Internship</span>
-            </div>
-            <h3 class="cert-title">AI-ML Virtual Internship</h3>
-            <p class="cert-issuer">EduSkills / AICTE · Google for Developers</p>
-            <p class="cert-date">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              April – June 2025 · 10 Weeks
-            </p>
-            <a href="https://res.cloudinary.com/dj9vanzqq/image/upload/ROHAN_KESHRI_118392_pages-to-jpg-0001_mnxmdz.jpg" class="cert-link" target="_blank" rel="noopener">
-              View Certificate
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- 2. Python Full Stack Developer Virtual Internship — Oct–Dec 2025 -->
-        <div class="cert-card" data-color="cyan" id="cert2">
-          <div class="cert-img-wrap">
-            <img
-              src="https://res.cloudinary.com/dj9vanzqq/image/upload/v1780251039/rohan_s_resume_page-0001_dyz8ew.jpg"
-              alt="Python Full Stack Developer Virtual Internship Certificate"
-              loading="lazy"
-            />
-          </div>
-          <div class="cert-body">
-            <div class="cert-issuer-row">
-              <span class="cert-badge">Verified</span>
-              <span class="cert-type-tag cert-type-internship">Internship</span>
-            </div>
-            <h3 class="cert-title">Python Full Stack Developer Virtual Internship</h3>
-            <p class="cert-issuer">EduSkills Academy · AICTE · Ministry of Education</p>
-            <p class="cert-date">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              October – December 2025 · 10 Weeks
-            </p>
-            <a href="https://res.cloudinary.com/dj9vanzqq/image/upload/v1780251039/rohan_s_resume_page-0001_dyz8ew.jpg" class="cert-link" target="_blank" rel="noopener">
-              View Certificate
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- 3. HackBhoomi Hackathon — Sep 2025 -->
-        <div class="cert-card" data-color="purple" id="cert3">
-          <div class="cert-img-wrap">
-            <img
-              src="https://res.cloudinary.com/dj9vanzqq/image/upload/v1780251039/WhatsApp_Image_2025-09-17_at_23.09.47_5160be6b_nndyoi.jpg"
-              alt="HackBhoomi Hackathon Certificate"
-              loading="lazy"
-            />
-          </div>
-          <div class="cert-body">
-            <div class="cert-issuer-row">
-              <span class="cert-badge">Verified</span>
-              <span class="cert-type-tag cert-type-hackathon">Hackathon</span>
-            </div>
-            <h3 class="cert-title">HackBhoomi Hackathon</h3>
-            <p class="cert-issuer">HackBhoomi</p>
-            <p class="cert-date">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              September 2025
-            </p>
-            <a href="https://res.cloudinary.com/dj9vanzqq/image/upload/v1780251039/WhatsApp_Image_2025-09-17_at_23.09.47_5160be6b_nndyoi.jpg" class="cert-link" target="_blank" rel="noopener">
-              View Certificate
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- 4. Bharatiya Antariksh Hackathon — Hack2Skill -->
-        <div class="cert-card" data-color="orange" id="cert4">
-          <div class="cert-img-wrap">
-            <img
-              src="https://res.cloudinary.com/dj9vanzqq/image/upload/v1780251039/Hack2skill-Certificate_mv0fou.png"
-              alt="Bharatiya Antariksh Hackathon Certificate"
-              loading="lazy"
-            />
-          </div>
-          <div class="cert-body">
-            <div class="cert-issuer-row">
-              <span class="cert-badge">Verified</span>
-              <span class="cert-type-tag cert-type-hackathon">Hackathon</span>
-            </div>
-            <h3 class="cert-title">Bharatiya Antariksh Hackathon</h3>
-            <p class="cert-issuer">Hack2Skill · Powered by ISRO / Govt. of India</p>
-            <p class="cert-date">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              Participant Certificate
-            </p>
-            <a href="https://res.cloudinary.com/dj9vanzqq/image/upload/v1780251039/Hack2skill-Certificate_mv0fou.png" class="cert-link" target="_blank" rel="noopener">
-              View Certificate
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- 5. Chandrayaan 3 MahaQuiz — Sep 2023 -->
-        <div class="cert-card" data-color="teal" id="cert5">
-          <div class="cert-img-wrap">
-            <img
-              src="https://res.cloudinary.com/dj9vanzqq/image/upload/v1780251038/Screenshot_2023-09-22_215006_olvdaw.png"
-              alt="Chandrayaan 3 MahaQuiz Certificate"
-              loading="lazy"
-            />
-          </div>
-          <div class="cert-body">
-            <div class="cert-issuer-row">
-              <span class="cert-badge">Verified</span>
-              <span class="cert-type-tag cert-type-achievement">Achievement</span>
-            </div>
-            <h3 class="cert-title">Chandrayaan 3 MahaQuiz</h3>
-            <p class="cert-issuer">MyGov India · ISRO</p>
-            <p class="cert-date">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              September 2023
-            </p>
-            <a href="https://res.cloudinary.com/dj9vanzqq/image/upload/v1780251038/Screenshot_2023-09-22_215006_olvdaw.png" class="cert-link" target="_blank" rel="noopener">
-              View Certificate
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- 6. International Conference ICCT-4 — Invertis University -->
-        <div class="cert-card" data-color="pink" id="cert6">
-          <div class="cert-img-wrap">
-            <img
-              src="https://res.cloudinary.com/dj9vanzqq/image/upload/v1780251442/icct-4_em4uwj.jpg"
-              alt="International Conference ICCT-4 Invertis University"
-              loading="lazy"
-            />
-          </div>
-          <div class="cert-body">
-            <div class="cert-issuer-row">
-              <span class="cert-badge">Verified</span>
-              <span class="cert-type-tag cert-type-conference">Conference</span>
-            </div>
-            <h3 class="cert-title">International Conference on Computing &amp; Technology (ICCT-4)</h3>
-            <p class="cert-issuer">Invertis University</p>
-            <p class="cert-date">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              Participant Certificate
-            </p>
-            <a href="https://res.cloudinary.com/dj9vanzqq/image/upload/v1780251442/icct-4_em4uwj.jpg" class="cert-link" target="_blank" rel="noopener">
-              View Certificate
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- 7. AIS Internship Certificate -->
-        <div class="cert-card" data-color="cyan" id="cert7">
-          <div class="cert-img-wrap">
-            <img
-              src="https://res.cloudinary.com/dj9vanzqq/image/upload/v1780252172/AIS_internship_sepgga.jpg"
-              alt="Amazing Indian Stories Internship Certificate"
-              loading="lazy"
-            />
-          </div>
-          <div class="cert-body">
-            <div class="cert-issuer-row">
-              <span class="cert-badge">Verified</span>
-              <span class="cert-type-tag cert-type-internship">Internship</span>
-            </div>
-            <h3 class="cert-title">Software Engineer Internship</h3>
-            <p class="cert-issuer">Amazing Indian Stories (AIS)</p>
-            <p class="cert-date">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              Oct 2025 – Dec 2025
-            </p>
-            <a href="https://res.cloudinary.com/dj9vanzqq/image/upload/v1780252172/AIS_internship_sepgga.jpg" class="cert-link" target="_blank" rel="noopener">
-              View Certificate
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- 8. IIIT Delhi Hackathon Certificate -->
-        <div class="cert-card" data-color="purple" id="cert8">
-          <div class="cert-img-wrap">
-            <img
-              src="https://res.cloudinary.com/dj9vanzqq/image/upload/v1780253365/353379_ga7blv.jpg"
-              alt="IIIT Delhi Hackathon Certificate"
-              loading="lazy"
-            />
-          </div>
-          <div class="cert-body">
-            <div class="cert-issuer-row">
-              <span class="cert-badge">Verified</span>
-              <span class="cert-type-tag cert-type-hackathon">Hackathon</span>
-            </div>
-            <h3 class="cert-title">Hackathon Participant</h3>
-            <p class="cert-issuer">IIIT Delhi</p>
-            <p class="cert-date">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              Participant Certificate
-            </p>
-            <a href="https://res.cloudinary.com/dj9vanzqq/image/upload/v1780253365/353379_ga7blv.jpg" class="cert-link" target="_blank" rel="noopener">
-              View Certificate
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-      <p class="gallery-hint">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        Click <strong>View Certificate</strong> on any card to open the full certificate in a new tab
-      </p>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="section section-alt" id="contact">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">08. Contact</span>
-        <h2 class="section-title">Let's Work Together</h2>
-      </div>
-      <div class="contact-layout">
-        <div class="contact-info">
-          <p class="contact-lead">
-            I'm currently <span class="highlight">open to new opportunities</span> — whether it's a full-time role, freelance project, or a cool collaboration. My inbox is always open!
-          </p>
-          <div class="contact-cards">
-            <a href="mailto:rohankeshri06@gmail.com" class="contact-card" id="contactEmail">
-              <div class="contact-card-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
-              </div>
-              <div>
-                <p class="contact-card-label">Email</p>
-                <p class="contact-card-value">rohankeshri06@gmail.com</p>
-              </div>
-            </a>
-            <a href="https://linkedin.com/in/rohan-keshri06" target="_blank" rel="noopener" class="contact-card" id="contactLinkedin">
-              <div class="contact-card-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-              </div>
-              <div>
-                <p class="contact-card-label">LinkedIn</p>
-                <p class="contact-card-value">rohan-keshri06</p>
-              </div>
-            </a>
-            <a href="https://github.com/keshrirohan" target="_blank" rel="noopener" class="contact-card" id="contactGithub">
-              <div class="contact-card-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              </div>
-              <div>
-                <p class="contact-card-label">GitHub</p>
-                <p class="contact-card-value">keshrirohan</p>
-              </div>
-            </a>
-            <a href="tel:+917859082214" class="contact-card" id="contactPhone">
-              <div class="contact-card-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              </div>
-              <div>
-                <p class="contact-card-label">Phone</p>
-                <p class="contact-card-value">+91 78590-82214</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
-          <div class="form-group">
-            <label for="nameInput">Your Name</label>
-            <input type="text" id="nameInput" name="name" placeholder="John Doe" required />
-          </div>
-          <div class="form-group">
-            <label for="emailInput">Your Email</label>
-            <input type="email" id="emailInput" name="email" placeholder="john@example.com" required />
-          </div>
-          <div class="form-group">
-            <label for="subjectInput">Subject</label>
-            <input type="text" id="subjectInput" name="subject" placeholder="Let's collaborate!" />
-          </div>
-          <div class="form-group">
-            <label for="messageInput">Message</label>
-            <textarea id="messageInput" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
-            <span>Send Message</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-          </button>
-          <div class="form-success" id="formSuccess">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-            Message sent! I'll get back to you soon.
-          </div>
-        </form>
       </div>
     </div>
   </section>
@@ -1004,12 +303,14 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <a href="#home" class="nav-logo">
-          <span class="logo-bracket">&lt;</span>RK<span class="logo-bracket">/&gt;</span>
-        </a>
-        <p class="footer-text">
-          Designed &amp; Built by <strong>Rohan Keshri</strong> · 2026
-        </p>
+        <a href="/" class="nav-logo"><span class="logo-bracket">&lt;</span>RK<span class="logo-bracket">/&gt;</span></a>
+        <nav class="footer-nav">
+          <a href="/experience">Experience</a>
+          <a href="/gallery">Gallery</a>
+          <a href="/certificates">Certificates</a>
+          <a href="/contact">Contact</a>
+        </nav>
+        <p class="footer-text">Designed &amp; Built by <strong>Rohan Keshri</strong> · 2026</p>
         <div class="footer-socials">
           <a href="https://github.com/keshrirohan" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
