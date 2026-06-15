@@ -27,7 +27,7 @@ export default function GalleryPage() {
   const fetchImages = async () => {
     setLoading(true);
     try {
-      const url = filter === "All" ? '/api/gallery' : \`/api/gallery?category=\${filter}\`;
+      const url = filter === "All" ? '/api/gallery' : `/api/gallery?category=${filter}`;
       const res = await fetch(url);
       const data = await res.json();
       setImages(Array.isArray(data) ? data : []);
@@ -63,7 +63,7 @@ export default function GalleryPage() {
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
-                className={\`px-6 py-2 rounded-full font-medium transition-all interactive \${filter === cat ? 'bg-white text-black' : 'glass text-gray-400 hover:text-white'}\`}
+                className={`px-6 py-2 rounded-full font-medium transition-all interactive ${filter === cat ? 'bg-white text-black' : 'glass text-gray-400 hover:text-white'}`}
               >
                 {cat}
               </button>

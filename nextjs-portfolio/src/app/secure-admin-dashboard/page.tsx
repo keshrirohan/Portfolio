@@ -99,7 +99,7 @@ function GalleryTab() {
 
   const handleDelete = async (id: string) => {
     if (!confirm("Delete this image?")) return;
-    await fetch(\`/api/admin/gallery?id=\${id}\`, { method: "DELETE" });
+    await fetch(`/api/admin/gallery?id=${id}`, { method: "DELETE" });
     fetchImages();
   };
 
@@ -184,7 +184,7 @@ function CertsTab() {
 
   const handleDelete = async (id: string) => {
     if (!confirm("Delete this certificate?")) return;
-    await fetch(\`/api/admin/certs?id=\${id}\`, { method: "DELETE" });
+    await fetch(`/api/admin/certs?id=${id}`, { method: "DELETE" });
     fetchCerts();
   };
 
@@ -244,7 +244,7 @@ function MessagesTab() {
             <div className="flex justify-between items-start mb-4">
               <div>
                 <h4 className="text-lg font-bold text-white">{msg.subject}</h4>
-                <p className="text-sm text-gray-400">{msg.name} ({msg.email}) {msg.phone ? \`| \${msg.phone}\` : ''}</p>
+                <p className="text-sm text-gray-400">{msg.name} ({msg.email}) {msg.phone ? `| ${msg.phone}` : ''}</p>
               </div>
               <span className="text-xs text-gray-500">{new Date(msg.createdAt).toLocaleString()}</span>
             </div>
